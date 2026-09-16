@@ -295,4 +295,19 @@ tr:last-child td{border-bottom:0}
 </footer>
 </main>
 
+<script>
+  (function() {
+    // Define el código de acceso deseado (ej. 1234)
+    const CODIGO_CORRECTO = "AuditPeugeot"; 
+    
+    let intento = prompt("Por favor, ingresa el código de acceso para ver la auditoría:");
+    
+    if (intento !== CODIGO_CORRECTO) {
+      alert("Código incorrecto. Acceso denegado.");
+      document.body.innerHTML = "<h2 style='text-align:center; margin-top:50px;'>Acceso denegado. Código incorrecto.</h2>";
+    }
+  })();
+</script>
+
+  
 </body></html>
