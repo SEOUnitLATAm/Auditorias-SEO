@@ -175,11 +175,27 @@ li > ol {
   margin-bottom: 1.5rem;
   color: #000000;
 }
-/* Contenedor flexible para alinear logo y título */
+/* Contenedor apilado y alineado totalmente a la izquierda */
 .header-container {
   display: flex;
-  align-items: center;  /* Centra verticalmente el logo con el texto */
-  gap: 15px;            /* Espacio entre el logo y el título */
+  flex-direction: column;    /* Coloca el logo arriba y el texto abajo */
+  align-items: flex-start;   /* Alinea el logo y el texto a la izquierda */
+  gap: 15px;                 /* Espacio entre el logo y el título */
+}
+
+/* Ajustes del logo */
+.header-logo {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Alineación del texto dentro del header */
+header h1 {
+  color: #ffffff !important;
+  margin: 0;
+  text-align: left;
 }
 
 /* Tamaño y ajuste del logo */
