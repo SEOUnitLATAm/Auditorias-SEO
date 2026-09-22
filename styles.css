@@ -49,6 +49,7 @@ a:hover {
 /* ==========================================================================
    3. HEADER Y ENCABEZADO PRINCIPAL
    ========================================================================== */
+/* Header general */
 header {
   background-color: #222222;
   padding: 30px 20px;
@@ -56,10 +57,24 @@ header {
   border-radius: 6px;
 }
 
-header h1, 
-header h2, 
-header h3, 
-header p {
+/* Contenedor en columna para apilar el logo arriba y el título abajo */
+.header-container {
+  display: flex;
+  flex-direction: column;    /* Apila los elementos verticalmente */
+  align-items: flex-start;   /* Alinea el logo y el texto a la izquierda */
+  gap: 15px;                 /* Espacio vertical entre el logo y el título */
+}
+
+/* Estilos del logo */
+.header-logo {
+  max-height: 50px;           /* Ajusta según la altura deseada para tu logo */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Estilos del título dentro del header */
+header h1 {
   color: #ffffff !important;
   margin: 0;
   text-align: left;
