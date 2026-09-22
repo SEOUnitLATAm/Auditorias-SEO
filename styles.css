@@ -198,7 +198,7 @@ header h1 {
 }
 .container {
   width: 100%;
-  max-width: 960px; /* Puedes ajustar este valor (ej. 960px, 1140px, 1400px) */
+  max-width: 1400px; /* Puedes ajustar este valor (ej. 960px, 1140px, 1400px) */
   margin: 0 auto;    /* Centra el contenedor horizontalmente */
   padding: 0 20px;   /* Evita que el texto toque los bordes en pantallas móviles */
 }
