@@ -183,14 +183,6 @@ li > ol {
   gap: 15px;                 /* Espacio entre el logo y el título */
 }
 
-/* Ajustes del logo */
-.header-logo {
-  max-height: 50px;
-  width: auto;
-  object-fit: contain;
-  display: block;
-}
-
 /* Alineación del texto dentro del header */
 header h1 {
   color: #ffffff !important;
