@@ -10,7 +10,7 @@
 }
 
 /* ==========================================================================
-   2. ESTILOS BASE, CONTENEDOR Y HERENCIA GLOBAL
+   2. ESTILOS BASE Y HERENCIA GLOBAL
    ========================================================================== */
 body {
   font-family: 'Roboto', sans-serif;
@@ -18,8 +18,6 @@ body {
   background-color: #ffffff;
   line-height: 1.6;
   padding: 20px;
-  max-width: 1200px; /* Ancho máximo de la página */
-  margin: 0 auto;    /* Centra la página en la pantalla */
 }
 
 .container {
@@ -31,7 +29,7 @@ body {
 
 /* Encabezados unificados */
 h1, h2, h3, h4, h5, h6 {
-  color: #000000;
+  color: #000050;
   text-align: justify;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -41,8 +39,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   margin-top: 2.5rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #5465ff;
   padding-bottom: 0.3rem;
+}
+
+p {
+  text-align: justify;
 }
 
 /* Enlaces */
@@ -52,13 +54,18 @@ a, a:visited {
 }
 
 a:hover {
-  color: #070606;
+  color: #93dfe3;
 }
 
 /* ==========================================================================
    3. HEADER Y ENCABEZADO PRINCIPAL
    ========================================================================== */
 header {
+  background-image: url('ruta/de/tu-imagen.jpg'); /* O una URL web: 'https://ejemplo.com/imagen.jpg' */
+  background-size: cover;       /* Ajusta la imagen para cubrir todo el header */
+  background-position: center;  /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  padding: 40px 20px;          /* Opcional: da espacio interno para que se vea el fondo */
   background-color: #93DFE3;
   padding: 30px 20px;
   margin-bottom: 2rem;
@@ -67,9 +74,9 @@ header {
 
 .header-container {
   display: flex;
-  flex-direction: column;    /* Coloca el logo arriba y el texto abajo */
-  align-items: flex-start;   /* Alinea el logo y el texto a la izquierda */
-  gap: 15px;                 /* Espacio entre el logo y el título */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
 }
 
 .header-logo {
@@ -80,42 +87,31 @@ header {
 }
 
 header h1 {
-  color: #ffffff !important;
+  color: #000000;
   margin: 0;
   text-align: left;
 }
 
 /* ==========================================================================
-   4. COMPONENTES (Caja de Score SEO, Botones y Tarjetas)
+   4. COMPONENTES (Score SEO, Botones y Tarjetas)
    ========================================================================== */
-/* Rectángulo gris sin bordes con texto grande para el Score SEO */
-.score-box {
-  font-size: 32px !important;
-  font-weight: 700;
-  background-color: #e0e0e0;
-  border: none !important;
+/* Estilos compartidos para las cajas de Score y Strong específicos */
+.score-box,
+h3 + p > strong {
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #b0f467;
   border-radius: 6px;
   padding: 14px 24px;
   display: inline-block;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
   color: #000000;
 }
 
-
-/* Aplica estilo al <p> si tiene un <strong> dentro */
-/* Cambia el color del <strong> que está dentro del primer <p> después de un h3 */
-h3 + p > strong {
-  font-size: 18px !important;
-  font-weight: 500;
-  background-color: #e0e0e0;
-  border: none !important;
-  border-radius: 6px;
-  padding: 14px 24px;
-  display: inline-block;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: #000000;
+/* Variación específica para Score Box (mayor tamaño) */
+.score-box {
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .btn {
@@ -144,17 +140,22 @@ h3 + p > strong {
 }
 
 /* ==========================================================================
-   5. TABLAS CON BORDES EN GRIS OSCURO
+   5. TABLAS RESPONSIVAS
    ========================================================================== */
-table {
+.table-responsive {
   width: 100%;
-  border-collapse: collapse;
+  overflow-x: auto;
   margin-bottom: 1.5rem;
   border: 1px solid #444444;
 }
 
-table th,
-table td {
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+table th, table td {
   border: 1px solid #444444;
   padding: 10px 12px;
   text-align: left;
@@ -164,9 +165,16 @@ table th {
   background-color: #f0f0f0;
   font-weight: 700;
 }
+caption {
+  margin-top: 0.5rem;    /* Espacio arriba del título */
+  margin-bottom: 1rem;   /* Espacio entre el título y la tabla (o el elemento siguiente) */
+  caption-side: top;     /* Define si la leyenda va 'top' (arriba) o 'bottom' (abajo) de la tabla */
+  font-weight: bold;
+  text-align: center;    /* O 'left' según el diseño que busques */
+}
 
 /* ==========================================================================
-   6. LISTAS CON TEXTO JUSTIFICADO
+   6. LISTAS Y CONTENIDO MULTIMEDIA
    ========================================================================== */
 ul, ol {
   margin-top: 10px;
@@ -179,26 +187,18 @@ li {
   margin-bottom: 0.5rem;
 }
 
-li > ul, 
-li > ol {
+li > ul, li > ol {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 .grid-responsivo {
   display: grid;
-  /* Crea columnas automáticas que se ajustan solas sin necesidad de media queries */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
+
 img, video, iframe {
   max-width: 100%;
   height: auto;
-}
-
-/* Para tablas con desbordamiento horizontal en móviles */
-table {
-  width: 100%;
-  display: block;
-  overflow-x: auto;
 }
