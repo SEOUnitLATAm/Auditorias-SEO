@@ -20,6 +20,14 @@ body {
   padding: 20px;
 }
 
+/* Correcto */
+body, container {
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo en escritorio */
+  margin: 0 auto;
+  padding: 0 15px;  /* Espacio en los bordes para móviles */
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -140,6 +148,7 @@ h3 + p > strong {
 .table-responsive {
   width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   margin-bottom: 1.5rem;
   border: 1px solid #444444;
 }
@@ -147,6 +156,7 @@ h3 + p > strong {
 table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 600px;
   margin-bottom: 1.5rem;
 }
 
