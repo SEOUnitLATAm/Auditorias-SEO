@@ -20,21 +20,12 @@ body {
   padding: 20px;
 }
 
-/* Correcto */
 body, container {
   width: 100%;
   max-width: 1200px; /* Ancho máximo en escritorio */
   margin: 0 auto;
   padding: 0 15px;  /* Espacio en los bordes para móviles */
 }
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 /* Encabezados unificados */
 h1, h2, h3, h4, h5, h6 {
   color: #000050;
