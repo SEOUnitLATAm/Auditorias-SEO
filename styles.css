@@ -102,6 +102,22 @@ header h1 {
   color: #000000;
 }
 
+
+/* Aplica estilo al <p> si tiene un <strong> dentro */
+/* Cambia el color del <strong> que está dentro del primer <p> después de un h3 */
+h3 + p > strong {
+  font-size: 18px !important;
+  font-weight: 500;
+  background-color: #e0e0e0;
+  border: none !important;
+  border-radius: 6px;
+  padding: 14px 24px;
+  display: inline-block;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #000000;
+}
+
 .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -167,4 +183,22 @@ li > ul,
 li > ol {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.grid-responsivo {
+  display: grid;
+  /* Crea columnas automáticas que se ajustan solas sin necesidad de media queries */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Para tablas con desbordamiento horizontal en móviles */
+table {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
 }
