@@ -52,14 +52,14 @@ a, a:visited {
 }
 
 a:hover {
-  color: #333333;
+  color: #070606;
 }
 
 /* ==========================================================================
    3. HEADER Y ENCABEZADO PRINCIPAL
    ========================================================================== */
 header {
-  background-color: #222222;
+  background-color: #93DFE3;
   padding: 30px 20px;
   margin-bottom: 2rem;
   border-radius: 6px;
