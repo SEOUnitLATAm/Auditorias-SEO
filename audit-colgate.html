@@ -1,421 +1,470 @@
 <html lang="es"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-<title>Auditoría SEO colgate.com.br - 30 de septiembre de 2026</title>
-</head>
-<body>
-<header>
-<div class="header-container"><img src="WPP Media_Wordmark_Navy_RGB.png" alt="Logo" class="header-logo">
-<h1 id="titulo">Auditoría SEO colgate.com.br</h1>
-<p>30 de septiembre de 2026</p>
-</div>
-</header>
-<nav>
-<h2 id="indice">Índice</h2>
-<ol>
-<li><a href="#resumen">Resumen ejecutivo</a></li>
-<li><a href="#prioridades">Acciones prioritarias</a></li>
-<li><a href="#detalle">Detalle por categoría</a></li>
-<li><a href="#palabras-clave">Palabras clave del sitio</a></li>
-<li><a href="#competencia-kw">Competencia por palabras clave</a></li>
-<li><a href="#plan">Plan de acción</a></li>
-<li><a href="#limitaciones">Limitaciones</a></li>
-<li><a href="#fuentes">Fuentes</a></li>
-</ol>
-</nav>
-<main>
-<section>
-<h2 id="resumen">1. Resumen ejecutivo</h2>
-<p class="score-box"><strong>Puntuación global: 80/100 (Aceptable).</strong></p>
-<p>El sitio presenta una base técnica sólida en datos estructurados, pero requiere atención urgente en rendimiento (Core Web Vitals) y control de rastreo. Se han detectado 3 hallazgos Altos relacionados con tiempos de carga excesivos, bloqueo de recursos por robots.txt y un volumen considerable de URLs no indexables. La puntuación es orientativa, ya que las categorías de GEO / AI Search, Autoridad y Negocio y Conversión no pudieron ser evaluadas por falta de datos. A nivel de contenidos, el dominio posee un fuerte liderazgo informacional, aunque existe una brecha en términos comerciales frente a competidores directos. Las prioridades principales son optimizar el LCP y el tiempo de ejecución de JavaScript, auditar las reglas de bloqueo en robots.txt y depurar las URLs internas no indexables.</p>
-</section>
-<section>
-<h2 id="prioridades">2. Acciones prioritarias</h2>
-<h4>Que priorizar para poner la casa en orden</h4>
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Prioridad</th>
-      <th scope="col">Acción</th>
-      <th scope="col">Categoría</th>
-      <th scope="col">Severidad</th>
-      <th scope="col">Equipo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Optimizar LCP y reducir Total Blocking Time (TBT) causado por JavaScript</td>
-      <td>CWV y UX</td>
-      <td>Alta</td>
-      <td>Desarrollo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Revisar reglas de robots.txt que bloquean el 10,62% de las URLs internas</td>
-      <td>SEO Técnico</td>
-      <td>Alta</td>
-      <td>SEO / Desarrollo</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Depurar el 19,96% de URLs internas no indexables para optimizar el crawl budget</td>
-      <td>Indexación y Rastreo</td>
-      <td>Alta</td>
-      <td>SEO</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Corregir H1 duplicados en el 12,26% de las páginas HTML</td>
-      <td>SEO Técnico</td>
-      <td>Media</td>
-      <td>Contenidos / SEO</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>Añadir atributos ALT descriptivos a las imágenes que carecen de él (6,33%)</td>
-      <td>Contenido e Intención</td>
-      <td>Media</td>
-      <td>Contenidos</td>
-    </tr>
-  </tbody>
-</table>
-</section>
-<section>
-<h2 id="detalle">3. Detalle por categoría</h2>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head><body><aside class="sidebar">
+  <!-- Contenedor del Logo -->
+  <div class="sidebar-logo">
+    <img src="/WPP Media_Wordmark_Negative_RGB.png" alt="WPP Media Logo">
+  </div>
+</aside>
+  <title>Auditoría SEO fogafin.gov.co - 1 de octubre de 2026</title>
+  <link rel="stylesheet" href="styles.css">
 
-<h3 id="cat-1">1. SEO Técnico</h3>
-<p><strong>Nota: 69/100.</strong> Estado: Evaluada.</p>
-<table>
-  <caption>Parámetros evaluados en SEO Técnico</caption>
-  <thead>
-    <tr>
-      <th scope="col">Parámetro</th>
-      <th scope="col">Severidad</th>
-      <th scope="col">Hallazgo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Rastreabilidad (robots.txt)</th>
-      <td>Alta</td>
-      <td>465 URLs internas bloqueadas por robots.txt (10,62% del total de 4.378 URLs)</td>
-    </tr>
-    <tr>
-      <th scope="row">Estructura HTML (H1)</th>
-      <td>Media</td>
-      <td>156 páginas HTML con H1 duplicado (12,26% de 1.272 páginas 2xx)</td>
-    </tr>
-    <tr>
-      <th scope="row">Metadatos (Description)</th>
-      <td>Media</td>
-      <td>58 páginas con meta description duplicada (4,56%)</td>
-    </tr>
-    <tr>
-      <th scope="row">Estructura HTML (H1)</th>
-      <td>Baja</td>
-      <td>8 páginas HTML sin etiqueta H1 (0,63%)</td>
-    </tr>
-  </tbody>
-</table>
-<p><strong>Impacto:</strong> El bloqueo masivo en robots.txt puede estar impidiendo el rastreo de recursos críticos o secciones importantes del sitio, afectando el descubrimiento. Los H1 y metadatos duplicados diluyen la relevancia temática de las páginas.</p>
-<p><strong>Recomendación:</strong> Auditar el archivo robots.txt para asegurar que no se bloqueen rutas esenciales (JS/CSS o páginas de valor). Revisar las plantillas de página para garantizar que cada URL genere un H1 y una meta description únicos. Equipo: SEO y Desarrollo.</p>
 
-<h3 id="cat-2">2. Indexación y Rastreo</h3>
-<p><strong>Nota: 70/100.</strong> Estado: Evaluada.</p>
-<table>
-  <caption>Parámetros evaluados en Indexación y Rastreo</caption>
-  <thead>
-    <tr>
-      <th scope="col">Parámetro</th>
-      <th scope="col">Severidad</th>
-      <th scope="col">Hallazgo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Estado de indexación</th>
-      <td>Alta</td>
-      <td>874 URLs internas marcadas como no indexables (19,96% del total)</td>
-    </tr>
-    <tr>
-      <th scope="row">Redirects (3xx)</th>
-      <td>Media</td>
-      <td>213 URLs internas devuelven códigos de redirección 3xx (4,87%)</td>
-    </tr>
-    <tr>
-      <th scope="row">Errores 4xx</th>
-      <td>Baja</td>
-      <td>16 URLs internas devuelven errores de cliente 4xx (0,37%)</td>
-    </tr>
-  </tbody>
-</table>
-<p><strong>Impacto:</strong> Un 20% de URLs no indexables consume crawl budget innecesariamente si estas páginas no aportan valor estratégico. Las redirecciones internas ralentizan el rastreo y la experiencia del usuario.</p>
-<p><strong>Recomendación:</strong> Identificar el origen de las URLs no indexables (parámetros, facetas) y bloquearlas vía robots.txt si no deben ser rastreadas. Actualizar los enlaces internos que apuntan a redirecciones 3xx para que enlacen directamente a la URL final 200 OK. Equipo: SEO y Desarrollo.</p>
+  <div class="container">
+    <!-- Panel Izquierdo -->
+    <aside class="sidebar">
+      <div class="score-circle">
+        <span class="score-number">55%</span>
+      </div>
+      <p class="site-url">fogafin.gov.co</p>
 
-<h3 id="cat-3">3. CWV y UX</h3>
-<p><strong>Nota: 70/100.</strong> Estado: Evaluada.</p>
-<table>
-  <caption>Parámetros evaluados en CWV y UX</caption>
-  <thead>
-    <tr>
-      <th scope="col">Parámetro</th>
-      <th scope="col">Severidad</th>
-      <th scope="col">Hallazgo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">LCP y TBT</th>
-      <td>Alta</td>
-      <td>Múltiples URLs presentan LCP superior a 12 segundos y TBT crítico (ej. 14.858 ms en /products?by-need=protect-enamel)</td>
-    </tr>
-    <tr>
-      <th scope="row">Scripts de terceros</th>
-      <td>Media</td>
-      <td>Alto impacto de código de terceros en el tiempo de ejecución de JavaScript</td>
-    </tr>
-  </tbody>
-</table>
-<p><strong>Impacto:</strong> Tiempos de LCP y TBT tan elevados resultan en una calificación "Poor" en Core Web Vitals, lo que perjudica directamente la experiencia del usuario, la tasa de conversión y actúa como un factor de ranking negativo en Google.</p>
-<p><strong>Recomendación:</strong> Implementar técnicas de code splitting, diferir la carga de JavaScript no crítico (defer/async) y optimizar la entrega de imágenes (formatos modernos, preload para la imagen LCP). Revisar y limitar el uso de scripts de terceros. Equipo: Desarrollo.</p>
+      <div class="metrics">
+        <div class="metric-item">
+          <span>SEO Técnico</span>
+          <span class="score-pass">41/100</span>
+        </div>
+        <div class="metric-item">
+          <span>Indexación y Rastreo</span>
+          <span class="score-pass">40/100</span>
+        </div>
+        <div class="metric-item">
+          <span>CWV y UX</span>
+          <span class="score-pass">63/100</span>
+        </div>
+        <div class="metric-item">
+          <span>Contenido e Intención</span>
+          <span class="score-pass">40/100</span>
+        </div>
+        <div class="metric-item">
+          <span>Entidades y Schema</span>
+          <span class="score-pass">100/100</span>
+        </div>
+        <div class="metric-item">
+          <span>GEO / Ai Search</span>
+          <span class="score-pass">40/100</span>
+        </div>
+        <div class="metric-item">
+          <span>Competencia</span>
+          <span class="score-pass">93/100</span>
+        </div>
+        <div class="metric-item">
+          <span>Autoridad</span>
+          <span class="score-pass">93/100</span>
+        </div>
+      </div>
+    </aside>
 
-<h3 id="cat-4">4. Contenido e Intención</h3>
-<p><strong>Nota: 93/100.</strong> Estado: Parcial (confianza baja).</p>
-<table>
-  <caption>Parámetros evaluados en Contenido e Intención</caption>
-  <thead>
-    <tr>
-      <th scope="col">Parámetro</th>
-      <th scope="col">Severidad</th>
-      <th scope="col">Hallazgo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Multimedia (Imágenes)</th>
-      <td>Media</td>
-      <td>90 imágenes carecen de atributo ALT descriptivo (6,33% de 1.422 imágenes)</td>
-    </tr>
-  </tbody>
-</table>
-<p><strong>Impacto:</strong> La falta de texto alternativo en imágenes reduce la accesibilidad del sitio y limita la capacidad de posicionar en Google Images, perdiendo tráfico potencial.</p>
-<p><strong>Recomendación:</strong> Auditar la biblioteca de medios y asegurar que todas las imágenes de contenido posean un atributo ALT descriptivo y relevante. Equipo: Contenidos.</p>
-<p><em>Nota: Ver sección 4 para el análisis detallado del Top 20 de palabras clave.</em></p>
+    <!-- Contenido Principal -->
+    <main class="main-content">
+      <header class="hero-section">
+        <h1>Auditoría SEO fogafin.gov.co</h1>
+        <h1>1 de octubre de 2026</h1>
+      </header>
 
-<h3 id="cat-5">5. Entidades y Schema</h3>
-<p><strong>Nota: 100/100.</strong> Estado: Evaluada.</p>
-<table>
-  <caption>Parámetros evaluados en Entidades y Schema</caption>
-  <thead>
-    <tr>
-      <th scope="col">Parámetro</th>
-      <th scope="col">Severidad</th>
-      <th scope="col">Hallazgo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Errores de Schema</th>
-      <td>Correcto</td>
-      <td>0 errores y 0 advertencias detectadas en los resultados enriquecidos</td>
-    </tr>
-  </tbody>
-</table>
+      <section class="preview-card">
+        <div class="card-header-banner">
+          <span class="logo">Fogafín</span>
+        </div>
+        <div class="card-body-banner">
+          <h2 id="resumen">1. Resumen ejecutivo</h2>
+          <p class="score-box"><strong>Puntuación global: 55/100 (Mejorable).</strong></p>
+          <p>El sitio presenta una base de autoridad sólida, pero sufre deficiencias estructurales graves que comprometen su visibilidad. Se han detectado 3 hallazgos Críticos y 4 Altos, destacando la ausencia masiva de etiquetas canonical, el bloqueo de bots de Inteligencia Artificial y un posicionamiento anómalo por términos fuera de contexto (ej. "calculadora científica", "lotería de medellín"). Frente a la competencia, el sitio tiene una cuota de liderazgo baja, siendo superado ampliamente por la Superfinanciera. Las prioridades inmediatas deben centrarse en corregir la canonicalización, habilitar el rastreo para IA y depurar el contenido indexado.</p>
+        </div>
+      </section>
+      
+      <section>
+        <div class="card-header-banner"></div>
+        <div class="card-body-banner2">
+          <h2 id="prioridades">2.Acciones prioritarias</h2>
+          <h3>¿Que priorizar para poner la casa en orden?</h3>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Prioridad</th>
+                <th scope="col">Acción</th>
+                <th scope="col">Categoría</th>
+                <th scope="col">Severidad</th>
+                <th scope="col">Equipo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Implementar etiquetas rel="canonical" autorreferenciadas en todas las URLs indexables.</td>
+                <td>Indexación y Rastreo</td>
+                <td>Crítica</td>
+                <td>Desarrollo / SEO</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Desbloquear los user-agents de IA (GPTBot, ClaudeBot, PerplexityBot, etc.) en el archivo robots.txt.</td>
+                <td>GEO / AI Search</td>
+                <td>Crítica</td>
+                <td>Desarrollo</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Auditar y desindexar/eliminar URLs que posicionan por términos irrelevantes (posible inyección de contenido o mala intención de búsqueda).</td>
+                <td>Contenido e Intención</td>
+                <td>Crítica</td>
+                <td>SEO / Contenidos</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Optimizar el tiempo de respuesta del servidor y recursos críticos para mejorar el LCP (actualmente en 3.4s).</td>
+                <td>CWV y UX</td>
+                <td>Alta</td>
+                <td>Desarrollo / Sistemas</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Completar metadatos faltantes (47.5% sin meta description, 33.8% sin H1).</td>
+                <td>SEO Técnico</td>
+                <td>Alta</td>
+                <td>Contenidos / SEO</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-<h3 id="cat-6">6. GEO / AI Search</h3>
-<p><strong>Estado: No evaluable.</strong> Esta categoría no se incluye en la puntuación global.</p>
-<p>Faltan datos de visibilidad en motores generativos (Share of Answers, citaciones en ChatGPT, Perplexity, AI Overviews). Para completarla, se requiere una exportación de herramientas de monitorización GEO.</p>
+      <section>
+        <div class="card-header-banner"></div>
+        <div class="card-body-banner2">
+          <h2 id="detalle">3.Detalle por categoría</h2>
+          <h3>Nuestra visibilidad orgánica depende de como gestionemos nuestro sitio</h3>
+          
+          <h3>1. SEO Técnico</h3>
+          <p><strong>Nota: 41/100.</strong> Estado: Evaluada.</p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Parámetro</th>
+                <th scope="col">Severidad</th>
+                <th scope="col">Hallazgo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Meta description</th><td>Alta</td><td>97 URLs carecen de meta description (47,5% de 204 URLs HTML indexables).</td></tr>
+              <tr><th scope="row">Encabezados H1</th><td>Alta</td><td>69 URLs no tienen etiqueta H1 (33,8%).</td></tr>
+              <tr><th scope="row">Encabezados H2</th><td>Alta</td><td>66 URLs presentan H2 duplicados (32,3%).</td></tr>
+              <tr><th scope="row">Title tag</th><td>Media</td><td>16 URLs tienen títulos duplicados (7,8%).</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Impacto:</strong> La falta de metadatos y encabezados H1 dificulta la comprensión del contenido por parte de los motores de búsqueda y reduce el CTR en las SERPs. (Cita: Bases de conocimiento y Herramientas de WPP Open).</p>
+          <p><strong>Recomendación:</strong> Generar reglas dinámicas en el CMS para poblar meta descriptions y asegurar un único H1 descriptivo por página.</p>
 
-<h3 id="cat-7">7. Competencia</h3>
-<p><strong>Nota: 93/100.</strong> Estado: Parcial (confianza baja).</p>
-<table>
-  <caption>Parámetros evaluados en Competencia</caption>
-  <thead>
-    <tr>
-      <th scope="col">Parámetro</th>
-      <th scope="col">Severidad</th>
-      <th scope="col">Hallazgo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Keyword Gap</th>
-      <td>Media</td>
-      <td>Brecha de posicionamiento en términos comerciales frente a competidores directos (odontoclinic.com.br y oralb.com.br)</td>
-    </tr>
-  </tbody>
-</table>
-<p><strong>Impacto:</strong> Aunque el sitio lidera en términos informacionales, la competencia está captando tráfico en etapas más cercanas a la conversión (términos comerciales y transaccionales).</p>
-<p><strong>Recomendación:</strong> Desarrollar una estrategia de contenidos orientada a cubrir el gap comercial, optimizando páginas de producto y categorías para competir en intenciones de búsqueda transaccionales. Equipo: SEO y Contenidos.</p>
-<p><em>Nota: Ver sección 5 para el análisis de competencia por palabras clave.</em></p>
+          <h3>2. Indexación y Rastreo</h3>
+          <p><strong>Nota: 40/100.</strong> Estado: Evaluada.</p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Parámetro</th>
+                <th scope="col">Severidad</th>
+                <th scope="col">Hallazgo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Canonicals</th><td>Crítica</td><td>607 URLs carecen de etiqueta canonical (74,6% de 813 URLs HTML/PDF).</td></tr>
+              <tr><th scope="row">Errores 4xx</th><td>Media</td><td>28 URLs internas devuelven error 4xx (0,89% del total rastreado).</td></tr>
+              <tr><th scope="row">Robots.txt</th><td>Baja</td><td>6 URLs internas bloqueadas por robots.txt (0,19%).</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Impacto:</strong> La ausencia masiva de canonicals divide las señales de ranking, gasta crawl budget y puede llevar a que Google elija una URL representativa no deseada. (Cita: Bases de conocimiento y Herramientas de WPP Open).</p>
+          <p><strong>Recomendación:</strong> Configurar el CMS para que inyecte automáticamente una etiqueta canonical autorreferenciada en todas las páginas indexables.</p>
 
-<h3 id="cat-8">8. Autoridad</h3>
-<p><strong>Estado: No evaluable.</strong> Esta categoría no se incluye en la puntuación global.</p>
-<p>Faltan datos de enlaces externos (backlinks) y dominios de referencia. Para completarla, exporta los datos desde una herramienta de análisis de enlaces.</p>
+          <h3>3. CWV y UX</h3>
+          <p><strong>Nota: 63/100.</strong> Estado: Evaluada.</p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Parámetro</th>
+                <th scope="col">Severidad</th>
+                <th scope="col">Hallazgo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">LCP</th><td>Alta</td><td>El LCP es de 3.457 ms (Pobre, &gt; 2.5s).</td></tr>
+              <tr><th scope="row">Peso de imágenes</th><td>Alta</td><td>113 imágenes superan los 100 KB (30,9% de 365 imágenes).</td></tr>
+              <tr><th scope="row">Atributo ALT</th><td>Media</td><td>18 imágenes carecen de atributo ALT (4,9%).</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Impacto:</strong> Un LCP deficiente afecta negativamente la experiencia del usuario y es un factor de ranking directo en el sistema de Page Experience. (Cita: Bases de conocimiento y Herramientas de WPP Open).</p>
+          <p><strong>Recomendación:</strong> Optimizar el TTFB del servidor, implementar formatos de imagen modernos (WebP/AVIF) y usar fetchpriority="high" en la imagen principal.</p>
 
-<h3 id="cat-9">9. Negocio y Conversión</h3>
-<p><strong>Estado: No evaluable.</strong> Esta categoría no se incluye en la puntuación global.</p>
-<p>Faltan datos de Search Console (clics, impresiones) y analítica web (conversiones, revenue). Para completarla, se requiere acceso a estas plataformas.</p>
-</section>
-<section>
-<h2 id="palabras-clave">4. Palabras clave del sitio: Top 20</h2>
-<table>
-  <caption>Top 20 palabras clave del sitio por peso (sin marca)</caption>
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Palabra clave</th>
-      <th scope="col">Volumen</th>
-      <th scope="col">Intención</th>
-      <th scope="col">Peso</th>
-      <th scope="col">Posición actual</th>
-      <th scope="col">URL posicionada</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><th scope="row">1</th><td>herpes</td><td>201.000</td><td>Informational</td><td>50,0</td><td>34</td><td><code>https://www.colgate.com.br/oral-health/mouth-sores-and-infections/are-cold-sores-contagious</code></td></tr>
-    <tr><th scope="row">2</th><td>herpes labial</td><td>135.000</td><td>Informational</td><td>33,6</td><td>32</td><td><code>https://www.colgate.com.br/oral-health/mouth-sores-and-infections/are-cold-sores-contagious</code></td></tr>
-    <tr><th scope="row">3</th><td>remedio para dor de dente</td><td>60.500</td><td>Commercial</td><td>24,1</td><td>29</td><td><code>https://www.colgate.com.br/oral-health/dental-emergencies-and-sports-safety/three-of-toothache-remedies</code></td></tr>
-    <tr><th scope="row">4</th><td>clorexidina</td><td>74.000</td><td>Informational</td><td>18,4</td><td>9</td><td><code>https://www.colgate.com.br/oral-health/gum-disease/chlorhexidine-gluconate-oral-rinse-what-is-it</code></td></tr>
-    <tr><th scope="row">5</th><td>coroa</td><td>74.000</td><td>Informational</td><td>18,4</td><td>16</td><td><code>https://www.colgate.com.br/oral-health/bridges-and-crowns/what-are-dental-crowns-and-tooth-bridges</code></td></tr>
-    <tr><th scope="row">6</th><td>toothpaste whitening</td><td>74.000</td><td>Informational</td><td>18,4</td><td>17</td><td><code>https://www.colgate.com.br/products/toothbrush/colgate-whitening-2x1</code></td></tr>
-    <tr><th scope="row">7</th><td>afta na boca</td><td>60.500</td><td>Informational</td><td>15,0</td><td>15</td><td><code>https://www.colgate.com.br/oral-health/mouth-sores-and-infections/canker-sore-vs-cold-sore-spot-these-3-differences</code></td></tr>
-    <tr><th scope="row">8</th><td>atm</td><td>60.500</td><td>Informational</td><td>15,0</td><td>49</td><td><code>https://www.colgate.com.br/oral-health/temporomandibular-disorder/what-is-temporomandibular-joint-disorder-tmj</code></td></tr>
-    <tr><th scope="row">9</th><td>mouthwash</td><td>60.500</td><td>Informational</td><td>15,0</td><td>18</td><td><code>https://www.colgate.com.br/oral-health/threats-to-dental-health/effects-of-toothpaste-and-mouthwash-on-covid19</code></td></tr>
-    <tr><th scope="row">10</th><td>bruxismo</td><td>49.500</td><td>Informational</td><td>12,3</td><td>29</td><td><code>https://www.colgate.com.br/oral-health/bruxism/bruxism-are-you-experiencing-it</code></td></tr>
-    <tr><th scope="row">11</th><td>clareador dental</td><td>27.100</td><td>Commercial</td><td>10,8</td><td>45</td><td><code>https://www.colgate.com.br/oral-health/teeth-whitening/tooth-whitening-gel</code></td></tr>
-    <tr><th scope="row">12</th><td>siso</td><td>40.500</td><td>Informational</td><td>10,1</td><td>44</td><td><code>https://www.colgate.com.br/oral-health/wisdom-teeth/what-are-wisdom-teeth</code></td></tr>
-    <tr><th scope="row">13</th><td>gengivite</td><td>40.500</td><td>Informational</td><td>10,1</td><td>64</td><td><code>https://www.colgate.com.br/oral-health/gum-disease/is-gingivitis-curable</code></td></tr>
-    <tr><th scope="row">14</th><td>disfagia</td><td>40.500</td><td>Informational</td><td>10,1</td><td>15</td><td><code>https://www.colgate.com.br/oral-health/adult-oral-care/dysphagia-treatment-ease-swallowing</code></td></tr>
-    <tr><th scope="row">15</th><td>escova interdental</td><td>40.500</td><td>Informational</td><td>10,1</td><td>35</td><td><code>https://www.colgate.com.br/oral-health/brushing-and-flossing/using-a-proxy-brush-to-clean-between-teeth</code></td></tr>
-    <tr><th scope="row">16</th><td>profilaxia</td><td>40.500</td><td>Informational</td><td>10,1</td><td>2</td><td><code>https://www.colgate.com.br/oral-health/dental-visits/what-happens-at-a-dental-prophylaxis-appointment</code></td></tr>
-    <tr><th scope="row">17</th><td>dente siso</td><td>40.500</td><td>Informational</td><td>10,1</td><td>11</td><td><code>https://www.colgate.com.br/oral-health/wisdom-teeth/what-are-wisdom-teeth</code></td></tr>
-    <tr><th scope="row">18</th><td>afta</td><td>40.500</td><td>Informational</td><td>10,1</td><td>48</td><td><code>https://www.colgate.com.br/oral-health/mouth-sores-and-infections/what-causes-canker-sores</code></td></tr>
-    <tr><th scope="row">19</th><td>gonorreia sintomas</td><td>40.500</td><td>Informational</td><td>10,1</td><td>29</td><td><code>https://www.colgate.com.br/oral-health/hiv-aids-and-stds/stds-and-related-conditions</code></td></tr>
-    <tr><th scope="row">20</th><td>clareamento dental</td><td>40.500</td><td>Informational</td><td>10,1</td><td>82</td><td><code>https://www.colgate.com.br/oral-health/clareamento-dental/clareamento-a-laser</code></td></tr>
-  </tbody>
-</table>
-<p>El peso es un índice de 0 a 100 que combina el volumen de búsqueda y la intención de cada palabra clave.</p>
-<p>Palabras clave analizadas: 358. Excluidas por marca: 42. El Top 20 está dominado por intenciones informacionales (18/20), con solo 2 términos comerciales. Actualmente, 2 palabras clave se encuentran en el Top 10, mientras que 18 representan oportunidades de optimización en posiciones 11-100.</p>
-</section>
-<section>
-<h2 id="competencia-kw">5. Competencia por palabras clave</h2>
-<table>
-  <caption>Competencia por palabras clave sin marca</caption>
-  <thead>
-    <tr>
-      <th scope="col">Dominio</th>
-      <th scope="col">Top 10</th>
-      <th scope="col">Top 100</th>
-      <th scope="col">% Top 10</th>
-      <th scope="col">Total posicionadas</th>
-      <th scope="col">Palabras lideradas</th>
-      <th scope="col">Cuota de liderazgo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><th scope="row"><code>colgate.com.br</code> (sitio auditado)</th><td>42</td><td>218</td><td>19,3%</td><td>218</td><td>105</td><td>36,2%</td></tr>
-    <tr><th scope="row"><code>odontoclinic.com.br</code></th><td>28</td><td>165</td><td>17,0%</td><td>165</td><td>62</td><td>21,4%</td></tr>
-    <tr><th scope="row"><code>oralb.com.br</code></th><td>15</td><td>68</td><td>22,1%</td><td>68</td><td>28</td><td>9,7%</td></tr>
-    <tr><th scope="row"><code>listerine.com.br</code></th><td>2</td><td>12</td><td>16,7%</td><td>12</td><td>5</td><td>1,7%</td></tr>
-  </tbody>
-</table>
-<p>Conjunto analizado: 290 palabras clave sin marca. Empates: 90. Excluidas por marca: 42.</p>
-<p>El sitio auditado lidera el conjunto analizado con una cuota de liderazgo del 36,2% y el mayor número de palabras en Top 10. Sin embargo, competidores como odontoclinic.com.br muestran una fuerte presencia en el Top 100, indicando una competencia activa por el tráfico orgánico en el sector.</p>
-</section>
-<section>
-<h2 id="plan">6. Plan de acción</h2>
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Prioridad</th>
-      <th scope="col">Acción</th>
-      <th scope="col">Categoría</th>
-      <th scope="col">Severidad</th>
-      <th scope="col">Impacto en negocio</th>
-      <th scope="col">Esfuerzo</th>
-      <th scope="col">Equipo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Optimizar tiempos de respuesta del servidor y ejecución JS para mejorar LCP y TBT</td>
-      <td>CWV y UX</td>
-      <td>Alta</td>
-      <td>Alto</td>
-      <td>Alto</td>
-      <td>Desarrollo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Auditar y corregir bloqueos masivos en robots.txt</td>
-      <td>SEO Técnico</td>
-      <td>Alta</td>
-      <td>Alto</td>
-      <td>Bajo</td>
-      <td>SEO / Desarrollo</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Limpiar URLs internas no indexables (parámetros, facetas) para optimizar crawl budget</td>
-      <td>Indexación y Rastreo</td>
-      <td>Alta</td>
-      <td>Medio</td>
-      <td>Medio</td>
-      <td>SEO</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Revisar plantillas para eliminar H1 y meta descriptions duplicadas</td>
-      <td>SEO Técnico</td>
-      <td>Media</td>
-      <td>Medio</td>
-      <td>Medio</td>
-      <td>Contenidos / Desarrollo</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>Crear contenido enfocado en intenciones comerciales para cerrar el Keyword Gap</td>
-      <td>Competencia</td>
-      <td>Media</td>
-      <td>Alto</td>
-      <td>Alto</td>
-      <td>Contenidos / SEO</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>Añadir atributos ALT a las imágenes faltantes</td>
-      <td>Contenido e Intención</td>
-      <td>Media</td>
-      <td>Bajo</td>
-      <td>Bajo</td>
-      <td>Contenidos</td>
-    </tr>
-  </tbody>
-</table>
-</section>
-<section>
-<h2 id="limitaciones">7. Limitaciones</h2>
-<ul>
-  <li><strong>Discrepancia de mercado:</strong> El dominio analizado es <code>colgate.com.br</code> (Brasil, idioma portugués), pero las instrucciones del usuario indican que el sitio está dirigido únicamente a público hispanohablante en México y no dispone de datos hreflang. Se ha procedido con el análisis de los datos proporcionados, pero esta contradicción debe ser revisada estratégicamente.</li>
-  <li><strong>Discrepancia de datos hreflang:</strong> La memoria del usuario indica que no hay datos hreflang, pero el archivo de rastreo muestra 1.222 páginas con hreflang implementado (aunque faltan etiquetas X-Default). Se ha evaluado basándose en los datos del rastreo.</li>
-  <li><strong>Categorías no evaluadas:</strong> Las categorías GEO / AI Search, Autoridad y Negocio y Conversión no pudieron ser evaluadas por falta de archivos de datos correspondientes.</li>
-  <li><strong>Supuestos de marca:</strong> Se han inferido los términos de marca ("colgate", "tandy", "periogard", "orthogard", "plax", "oralb", "odontoclinic", "listerine") para la exclusión en el análisis de palabras clave, ya que no fueron proporcionados explícitamente.</li>
-  <li><strong>Intención inferida:</strong> La intención de búsqueda en la Tabla A fue inferida a partir de los datos proporcionados en el archivo de posiciones.</li>
-</ul>
-</section>
-<section>
-<h2 id="fuentes">8. Fuentes</h2>
-<ul>
-<li>Bases de conocimiento y Herramientas de WPP Open</li>
-<li>Datos de rastreo desde WPP Open y plataformas especializadas</li>
-<li>Archivos aportados por el cliente: colgate.com.br-organic.Positions-br-20260928-2026-09-30T02_52_31Z.csv, datos_estructurados_todo.csv, gap.keywords_2026-09-30T02_51_21.719Z.csv, pagespeed_todo.csv, resumen_del_rastreo.csv</li>
-</ul>
-<p>Informe generado por el Auditor SEO Integral 2027. Las estimaciones de impacto se basan en los datos aportados y no garantizan posiciones, tráfico ni citaciones en IA.</p>
-</section>
+          <h3>4. Contenido e Intención</h3>
+          <p><strong>Nota: 40/100.</strong> Estado: Evaluada.</p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Parámetro</th>
+                <th scope="col">Severidad</th>
+                <th scope="col">Hallazgo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Search Intent</th><td>Crítica</td><td>El sitio posiciona por términos totalmente fuera de contexto ("calculadora cientifica", "qué ganó la lotería de medellín", "qué son onomatopeyas").</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Impacto:</strong> Atraer tráfico por intenciones de búsqueda no relacionadas con la misión de Fogafín diluye la autoridad temática (Topical Authority) y sugiere posibles vulnerabilidades de seguridad (hacked content) o contenido de muy baja calidad. (Cita: Bases de conocimiento y Herramientas de WPP Open).</p>
+          <p><strong>Recomendación:</strong> Auditar urgentemente las URLs que posicionan por estos términos (ej. /que-es-fogafin/quienes-somos) para limpiar contenido inyectado o irrelevante. Ver sección 4 para más detalles.</p>
+
+          <h3>5. Entidades y Schema</h3>
+          <p><strong>Nota: 100/100.</strong> Estado: Parcial (confianza baja).</p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Parámetro</th>
+                <th scope="col">Severidad</th>
+                <th scope="col">Hallazgo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Errores Schema</th><td>Correcto</td><td>0 errores y 0 advertencias en las 2 URLs evaluadas en la muestra.</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Impacto:</strong> Los datos estructurados válidos facilitan la comprensión de entidades por parte de motores tradicionales y agentes de IA. (Cita: Bases de conocimiento y Herramientas de WPP Open).</p>
+          <p><strong>Recomendación:</strong> Ampliar la cobertura de marcado Schema (Organization, FAQ, Article) a todo el sitio.</p>
+
+          <h3>6. GEO / AI Search</h3>
+          <p><strong>Nota: 40/100.</strong> Estado: Parcial (confianza baja).</p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Parámetro</th>
+                <th scope="col">Severidad</th>
+                <th scope="col">Hallazgo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Control de crawlers IA</th><td>Crítica</td><td>Bloqueo explícito a GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot y Google-Extended.</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Impacto:</strong> Bloquear los bots de IA impide que el contenido de Fogafín sea ingerido y citado en respuestas generativas (ChatGPT, Perplexity, Copilot), perdiendo visibilidad en estas nuevas superficies. (Cita: Bases de conocimiento y Herramientas de WPP Open).</p>
+          <p><strong>Recomendación:</strong> Modificar el archivo robots.txt para permitir el rastreo de los principales bots de IA, manteniendo el control sobre el crawl budget.</p>
+
+          <h3>7. Competencia</h3>
+          <p><strong>Nota: 93/100.</strong> Estado: Evaluada.</p>
+          <p>El sitio compite en un entorno dominado por entidades gubernamentales de mayor envergadura. Ver sección 5 para el análisis detallado de cuota de liderazgo.</p>
+
+          <h3>8. Autoridad</h3>
+          <p><strong>Nota: 93/100.</strong> Estado: Evaluada.</p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Parámetro</th>
+                <th scope="col">Severidad</th>
+                <th scope="col">Hallazgo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Backlinks</th><td>Media</td><td>Fogafín posee 5.934 dominios de referencia, significativamente por debajo de competidores como Superfinanciera (58.106).</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Impacto:</strong> La brecha de autoridad limita la capacidad de competir por términos genéricos de alto volumen en el sector financiero. (Cita: Bases de conocimiento y Herramientas de WPP Open).</p>
+          <p><strong>Recomendación:</strong> Fomentar la citación y enlaces desde entidades gubernamentales e instituciones financieras inscritas.</p>
+
+          <h3>9. Negocio y Conversión</h3>
+          <p><strong>Nota: 70/100.</strong> Estado: Parcial (confianza baja).</p>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Parámetro</th>
+                <th scope="col">Severidad</th>
+                <th scope="col">Hallazgo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Tráfico Orgánico</th><td>Alta</td><td>Caída severa del tráfico orgánico estimado (de ~52k en oct-2025 a ~4.4k en sep-2026).</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Impacto:</strong> La pérdida de tráfico indica una pérdida de relevancia o el impacto de actualizaciones algorítmicas recientes. (Cita: Bases de conocimiento y Herramientas de WPP Open).</p>
+          <p><strong>Recomendación:</strong> Cruzar estos datos con Search Console para identificar las carpetas exactas que perdieron visibilidad.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="card-header-banner"></div>
+        <div class="card-body-banner2">
+          <h2 id="palabras-clave">4.Palabras clave del sitio: Top 20</h2>
+          <h3>Qué palabras clave traen tráfico al sitio de la marca?</h3>
+          <table>
+            <caption>Top 20 palabras clave del sitio por peso (sin marca)</caption>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Palabra clave</th>
+                <th scope="col">Volumen</th>
+                <th scope="col">Intención</th>
+                <th scope="col">Peso</th>
+                <th scope="col">Posición actual</th>
+                <th scope="col">URL posicionada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">1</th><td>calculadora cientifica</td><td>60.500</td><td>Informacional</td><td>50,0</td><td>49</td><td><code>https://www.fogafin.gov.co/calculadora</code></td></tr>
+              <tr><th scope="row">2</th><td>qué es la</td><td>27.100</td><td>Informacional</td><td>22,4</td><td>65</td><td><code>https://www.fogafin.gov.co/que-es-fogafin/quienes-somos</code></td></tr>
+              <tr><th scope="row">3</th><td>mipg</td><td>12.100</td><td>Informacional</td><td>10,0</td><td>19</td><td><code>https://www.fogafin.gov.co/planeacion-estrategica/modelo-integrado-de-planeacion-y-gestion</code></td></tr>
+              <tr><th scope="row">4</th><td>credifin</td><td>18.100</td><td>Navegacional</td><td>9,0</td><td>14</td><td><code>https://www.fogafin.gov.co/</code></td></tr>
+              <tr><th scope="row">5</th><td>qué ganó la lotería de medellín</td><td>9.900</td><td>Informacional</td><td>8,2</td><td>40</td><td><code>https://www.fogafin.gov.co/que-es-fogafin/quienes-somos</code></td></tr>
+              <tr><th scope="row">6</th><td>calculadora de alicia</td><td>5.400</td><td>Comercial</td><td>7,1</td><td>51</td><td><code>https://www.fogafin.gov.co/calculadora</code></td></tr>
+              <tr><th scope="row">7</th><td>qué son onomatopeyas</td><td>6.600</td><td>Informacional</td><td>5,5</td><td>41</td><td><code>https://www.fogafin.gov.co/que-es-fogafin/quienes-somos</code></td></tr>
+              <tr><th scope="row">8</th><td>depositos</td><td>5.400</td><td>Informacional</td><td>4,5</td><td>24</td><td><code>https://www.fogafin.gov.co/entidades-inscritas/kit-del-seguro-de-depositos</code></td></tr>
+              <tr><th scope="row">9</th><td>qué es un ecosistema</td><td>4.400</td><td>Informacional</td><td>3,6</td><td>37</td><td><code>https://www.fogafin.gov.co/que-es-fogafin/quienes-somos</code></td></tr>
+              <tr><th scope="row">10</th><td>d1 trabaja con nosotros</td><td>4.400</td><td>Informacional</td><td>3,6</td><td>76</td><td><code>https://www.fogafin.gov.co/trabaja-con-nosotros</code></td></tr>
+              <tr><th scope="row">11</th><td>qué es geopolitica</td><td>4.400</td><td>Informacional</td><td>3,6</td><td>54</td><td><code>https://www.fogafin.gov.co/que-es-fogafin/quienes-somos</code></td></tr>
+              <tr><th scope="row">12</th><td>cuenta de ahorros</td><td>4.400</td><td>Informacional</td><td>3,6</td><td>10</td><td><code>https://www.fogafin.gov.co/</code></td></tr>
+              <tr><th scope="row">13</th><td>seguro de viaje internacional</td><td>3.600</td><td>Informacional</td><td>3,0</td><td>34</td><td><code>https://www.fogafin.gov.co/que-es-el-seguro-de-depositos</code></td></tr>
+              <tr><th scope="row">14</th><td>cdt av villas</td><td>2.900</td><td>Informacional</td><td>2,4</td><td>1</td><td><code>https://www.fogafin.gov.co/</code></td></tr>
+              <tr><th scope="row">15</th><td>fondo crc</td><td>4.400</td><td>Navegacional</td><td>2,2</td><td>49</td><td><code>https://www.fogafin.gov.co/en/entidades-inscritas</code></td></tr>
+              <tr><th scope="row">16</th><td>bancos de colombia</td><td>2.400</td><td>Informacional</td><td>2,0</td><td>1</td><td><code>https://www.fogafin.gov.co/entidades-inscritas</code></td></tr>
+              <tr><th scope="row">17</th><td>veeduria ciudadana</td><td>2.400</td><td>Informacional</td><td>2,0</td><td>4</td><td><code>https://www.fogafin.gov.co/sites/default/files/2025-10/Gu%C3%ADa%20de%20Veedur%C3%ADas%20Ciudadanas%20-%20Ministerio%20de%20Hacienda.pdf</code></td></tr>
+              <tr><th scope="row">18</th><td>coink</td><td>3.600</td><td>Navegacional</td><td>1,8</td><td>1</td><td><code>https://www.fogafin.gov.co/</code></td></tr>
+              <tr><th scope="row">19</th><td>creafam</td><td>2.900</td><td>Navegacional</td><td>1,4</td><td>34</td><td><code>https://www.fogafin.gov.co/</code></td></tr>
+              <tr><th scope="row">20</th><td>fga sa</td><td>2.900</td><td>Navegacional</td><td>1,4</td><td>39</td><td><code>https://www.fogafin.gov.co/</code></td></tr>
+            </tbody>
+          </table>
+          <p>El peso es un índice de 0 a 100 que combina el volumen de búsqueda y la intención de cada palabra clave.</p>
+          <p>Palabras clave analizadas: 235. Excluidas por marca: 25. Evidencia: [Archivo: fogafin.gov.co-organic.Positions-co-20260929-2026-09-30T22_37_22Z.csv, columnas "Keyword", "Search Volume", "Keyword Intents", "Position", "URL"].</p>
+          <p>El Top 20 está fuertemente sesgado hacia intenciones informacionales irrelevantes para la entidad (loterías, ciencias, diccionarios), lo que indica un problema grave de calidad de contenido o inyección. Solo 3 palabras clave del Top 20 están en el Top 10, mientras que la gran mayoría se encuentra en posiciones de oportunidad (11-100) pero sin valor de negocio real.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="card-header-banner"></div>
+        <div class="card-body-banner2">
+          <h2 id="competencia-kw">5.Competencia por palabras clave</h2>
+          <h3>El potencial de búsqueda del mercado y los competidores top, ¿Cuál es nuestro share?</h3>
+          <table>
+            <caption>Competencia por palabras clave sin marca</caption>
+            <thead>
+              <tr>
+                <th scope="col">Dominio</th>
+                <th scope="col">Top 10</th>
+                <th scope="col">Top 100</th>
+                <th scope="col">% Top 10</th>
+                <th scope="col">Total posicionadas</th>
+                <th scope="col">Palabras lideradas</th>
+                <th scope="col">Cuota de liderazgo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row"><code>superfinanciera.gov.co</code></th><td>38</td><td>165</td><td>23,0%</td><td>165</td><td>112</td><td>57,4%</td></tr>
+              <tr><th scope="row"><code>fogafin.gov.co</code> (sitio auditado)</th><td>18</td><td>195</td><td>9,2%</td><td>195</td><td>45</td><td>23,1%</td></tr>
+              <tr><th scope="row"><code>minhacienda.gov.co</code></th><td>8</td><td>42</td><td>19,0%</td><td>42</td><td>12</td><td>6,2%</td></tr>
+              <tr><th scope="row"><code>supersociedades.gov.co</code></th><td>2</td><td>18</td><td>11,1%</td><td>18</td><td>2</td><td>1,0%</td></tr>
+              <tr><th scope="row"><code>sedeelectronica.sic.gov.co</code></th><td>0</td><td>5</td><td>0,0%</td><td>5</td><td>0</td><td>0,0%</td></tr>
+            </tbody>
+          </table>
+          <p>Conjunto analizado: 195 palabras clave sin marca. Empates: 24. Excluidas por marca: 15. Evidencia: [Archivo: gap.keywords_2026-09-30T22_43_54.603Z.csv, columnas "Keyword", "fogafin.gov.co", "superfinanciera.gov.co", "minhacienda.gov.co", "supersociedades.gov.co", "sedeelectronica.sic.gov.co"].</p>
+          <p>La Superintendencia Financiera lidera claramente el segmento con una cuota del 57,4% y el doble de palabras clave en el Top 10. Fogafín tiene un volumen alto de palabras posicionadas (195), pero una eficiencia muy baja (% Top 10 del 9,2%), lo que evidencia una brecha importante en autoridad y relevancia de contenido frente al líder.</p>
+        </div>
+      </section>
+
+    <section>
+        <div class="card-header-banner"></div>
+        <div class="card-body-banner2">
+         <h2 id="plan">6.Plan de acción</h2>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Prioridad</th>
+              <th scope="col">Acción</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Severidad</th>
+              <th scope="col">Impacto en negocio</th>
+              <th scope="col">Esfuerzo</th>
+              <th scope="col">Equipo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Auditar y eliminar contenido irrelevante/inyecciones (ej. calculadoras, loterías).</td>
+              <td>Contenido e Intención</td>
+              <td>Crítica</td>
+              <td>Alto</td>
+              <td>Medio</td>
+              <td>SEO / Seguridad</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Implementar etiquetas canonical en todas las plantillas.</td>
+              <td>Indexación y Rastreo</td>
+              <td>Crítica</td>
+              <td>Alto</td>
+              <td>Bajo</td>
+              <td>Desarrollo</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Actualizar robots.txt para permitir rastreo de bots de IA.</td>
+              <td>GEO / AI Search</td>
+              <td>Crítica</td>
+              <td>Alto</td>
+              <td>Bajo</td>
+              <td>Desarrollo</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Optimizar imágenes pesadas (&gt;100kb) y mejorar TTFB para LCP.</td>
+              <td>CWV y UX</td>
+              <td>Alta</td>
+              <td>Medio</td>
+              <td>Medio</td>
+              <td>Desarrollo</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Completar meta descriptions y etiquetas H1 faltantes.</td>
+              <td>SEO Técnico</td>
+              <td>Alta</td>
+              <td>Medio</td>
+              <td>Bajo</td>
+              <td>Contenidos</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Corregir errores 4xx internos y actualizar enlaces.</td>
+              <td>Indexación y Rastreo</td>
+              <td>Media</td>
+              <td>Bajo</td>
+              <td>Bajo</td>
+              <td>SEO</td>
+            </tr>
+          </tbody>
+        </table> 
+        </div>
+    </section>
+
+    <section>
+        <div class="card-header-banner"></div>
+        <div class="card-body-banner2">
+        <h2 id="limitaciones">7.Limitaciones</h2>
+        <ul>
+          <li><strong>Supuestos de marca:</strong> Se asumieron "fogafin", "foga" y "fondo de garantias" como términos de marca al no ser proporcionados explícitamente.</li>
+          <li><strong>Intención inferida:</strong> La intención de búsqueda en la Tabla A se extrajo de la columna "Keyword Intents" del archivo aportado.</li>
+          <li><strong>Confianza baja:</strong> Las categorías Entidades y Schema, GEO / AI Search, y Negocio y Conversión se marcaron con confianza baja debido a la escasez de datos (solo 2 URLs en el reporte de schema, falta de datos de conversión en analítica).</li>
+          <li><strong>Mapeo de columnas:</strong> En el archivo de competencia, los dominios se extrajeron de las cabeceras de las columnas de posición.</li>
+        </ul>        
+        </div>
+    </section>
+
+    <section>
+        <div class="card-header-banner"></div>
+        <div class="card-body-banner2">
+        <h2 id="fuentes">8.Fuentes</h2>
+        <ul>
+        <li>Bases de conocimiento y Herramientas de WPP Open</li>
+        <li>Datos de rastreo desde WPP Open y plataformas especializadas</li>
+        <li>Archivos aportados por el cliente: crawlability-audit-2026-09-30.pdf, datos_estructurados_todo.csv, fogafin.gov.co-organic.Positions-co-20260929-2026-09-30T22_37_22Z.csv, gap.keywords_2026-09-30T22_43_54.603Z.csv, overview-trend-2026-09-30T22_48_10Z.csv, pagespeed_todo.csv, resumen_del_rastreo.csv</li>
+        </ul>
+        <p>Informe generado por el Auditor SEO Integral 2027. Las estimaciones de impacto se basan en los datos aportados y no garantizan posiciones, tráfico ni citaciones en IA.</p>
+        </div>
+    </section>
 </main>
+</div>
 
 </body></html>
