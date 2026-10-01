@@ -1,186 +1,548 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* =========================================================
+   WPP MEDIA - SEO AUDIT TEMPLATE CSS 2026
+========================================================= */
+
+:root {
+
+  /* Colors */
+  --bg-dark: #000050;
+  --bg-sidebar: #000050;
+  --bg-light: #ffffff;
+  --bg-card: #f7f9fa;
+
+  --bg-banner-green: #b0f467;
+  --bg-banner-gray: #f0f0f0;
+
+  --text-light: #ffffff;
+  --text-primary: #000050;
+  --text-dark: #0a0a0a;
+  --text-muted: #333333;
+
+  --color-h3: #5465ff;
+
+  --color-pass: #00b887;
+  --color-fail: #e08b28;
+
+  --border-dark: #4b5563;
+  --border-light: #2a3447;
+
+  --gray-100: #f9fafb;
+  --gray-300: #e5e7eb;
+
+  /* Typography */
+  --font-main:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+
+  /* Layout */
+  --sidebar-width: 280px;
+  --card-max-width: 1200px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-full: 9999px;
+
+  /* Effects */
+  --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  /* Motion */
+  --transition-fast: 0.2s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-font-family: 'Roboto', sans-serif;
-color: #000000;
-background-color: #ffffff;
-line-height: 1.6;
-padding: 20px;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-main);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-body, container {
-width: 100%;
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 15px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-color: #000050;
-text-align: justify;
-margin-top: 2rem;
-margin-bottom: 1rem;
-line-height: 1.3;
-font-weight: 700;
-}
-
-h2 {
-  margin-top: 2.5rem;
-  border-bottom: 1px solid #5465ff;
-  padding-bottom: 0.3rem;
-}
-
-p {
-  text-align: justify;
-}
-
-p, li, blockquote, h1, h2, h3, h4 {
+img,
+picture,
+svg,
+video {
+  display: block;
   max-width: 100%;
-  overflow-wrap: break-word; 
-  word-break: break-word;
+  height: auto;
 }
 
-a, a:visited {
-  color: #000000;
-  text-decoration: underline;
+iframe {
+  max-width: 100%;
 }
 
-a:hover {
-  color: #93dfe3;
+p,
+article,
+.card-body-banner,
+.card-body-banner2 {
+  text-align: justify;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  margin-bottom: 1.25rem;
 }
 
-header {
-  background: linear-gradient(54deg, #93DFE3, #B0F467);
-  padding: 30px 20px;
-  margin-bottom: 2rem;
-  border-radius: 6px;
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+  margin-top: 1.75rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  color: var(--text-primary);
 }
 
-.header-container {
+h3 {
+  color: var(--color-h3);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   SOLUCIÓN DEFINITIVA ANTI-SOLAPAMIENTO
+========================================================= */
+
+.sidebar {
+
+  position: sticky;
+  top: 25px;
+
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+
+  
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
+  align-items: center;
+
+  gap: 20px;
+  padding: 20px 10px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-h3) transparent;
 }
 
-.header-logo {
-  max-height: 50px;
-  width: auto;
-  object-fit: contain;
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--color-h3);
+  border-radius: 999px;
+}
+
+.sidebar img,
+.sidebar .logo {
   display: block;
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
 }
 
-header h1 {
-  color: #000000;
-  margin: 0;
-  text-align: left;
+
+/* =========================================================
+   SCORE
+========================================================= */
+
+.score-circle {
+
+  width: 150px;
+  height: 150px;
+
+  min-width: 150px;
+  min-height: 150px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 6px solid var(--color-fail);
+  border-radius: 50%;
+
+  margin-top: 10px;
 }
 
-.score-box,
-h3 + p > strong {
-  font-size: 18px;
-  font-weight: 500;
-  background-color: #b0f467;
-  border-radius: 6px;
-  padding: 14px 24px;
-  display: inline-block;
-  margin: 1.5rem 0;
-  color: #000000;
-}
-
-.score-box {
-  font-size: 32px;
+.score-number {
+  font-size: 2.5rem;
   font-weight: 700;
+  color: var(--text-light);
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #000000;
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
-  margin-bottom: 1rem;
+.score-pass {
+  color: var(--color-pass);
 }
 
-.btn:hover {
-  background-color: #333333;
+.score-fail {
+  color: var(--color-fail);
 }
 
-.card {
+
+/* =========================================================
+   METRICS
+========================================================= */
+
+.metrics {
   width: 100%;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 20px;
+  margin-top: 2rem;
+  flex-shrink: 0;
 }
+
+.metric-item {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1rem 0;
+
+  border-bottom: 1px solid var(--border-light);
+
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
+
+  background: var(--bg-light);
+  color: var(--text-dark);
+
+  padding: 3.5rem 2.5rem;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section {
+  width: 100%;
+  max-width: var(--card-max-width);
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-primary);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn-primary {
+
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.8rem;
+
+  background: var(--bg-sidebar);
+  color: var(--text-light);
+
+  border: none;
+  border-radius: var(--radius-sm);
+
+  font-weight: 700;
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    opacity var(--transition-fast);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.preview-card,
+.score-card {
+
+  width: 100%;
+  max-width: var(--card-max-width);
+
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+
+  margin-bottom: 2rem;
+}
+
+.preview-card {
+  overflow: hidden;
+  background: var(--bg-light);
+}
+
+.score-card {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  padding: 2.5rem;
+
+  background: var(--bg-card);
+}
+
+
+/* =========================================================
+   BANNERS
+========================================================= */
+
+.card-header-banner {
+
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  padding: 1.5rem 2.5rem;
+
+  background: var(--bg-light);
+
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.card-body-banner {
+
+  padding: 2.5rem;
+
+  background: var(--bg-banner-green);
+  color: var(--text-primary);
+
+  line-height: 1.8;
+}
+
+.card-body-banner2 {
+
+  padding: 2.5rem;
+
+  background: var(--bg-banner-gray);
+  color: var(--text-dark);
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   TABLES
+========================================================= */
 
 .table-responsive {
+
   width: 100%;
+
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin-bottom: 1.5rem;
-  border: 1px solid #444444;
+
+  margin: 2.5rem 0;
+
+  border-radius: var(--radius-md);
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 table {
+
   width: 100%;
-  border-collapse: collapse;
-  min-width: 600px;
-  margin-bottom: 1.5rem;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  table-layout: fixed;
+
+  background: var(--bg-light);
+  color: var(--text-dark);
 }
 
-table th, table td {
-  border: 1px solid #444444;
-  padding: 10px 12px;
+th {
+
+  padding: 1rem 1.25rem;
+
+  background: var(--gray-300);
+  color: var(--text-primary);
+
+  text-align: left;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  border-bottom: 2px solid var(--border-dark);
+}
+
+td {
+
+  padding: 1rem 1.25rem;
+
+  border-bottom: 1px solid var(--gray-300);
+
+  line-height: 1.6;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+tbody tr:hover {
+  background: var(--gray-100);
+}
+
+
+/* =========================================================
+   UTILITIES
+========================================================= */
+
+.hidden {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
   text-align: left;
 }
 
-table th {
-  background-color: #f0f0f0;
-  font-weight: 700;
-}
-caption {
-  margin-top: 0.5rem;    
-  margin-bottom: 1rem;
-  caption-side: top;
-  font-weight: bold;
-  text-align: center;    
+.text-right {
+  text-align: right;
 }
 
-ul, ol {
-  margin-top: 10px;
-  margin-bottom: 1.5rem;
-  padding-left: 1.8rem;
-}
 
-li {
-  text-align: justify;
-  margin-bottom: 0.5rem;
-}
+/* =========================================================
+   MOBILE
+========================================================= */
 
-li > ul, li > ol {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
+@media (max-width: 768px) {
 
-.grid-responsivo {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
+  .container {
+    flex-direction: column;
+  }
 
-img, video, iframe {
-  max-width: 100%;
-  height: auto;
+  .sidebar {
+
+    position: relative;
+
+    width: 100%;
+    min-width: 100%;
+
+    height: auto;
+    max-height: none;
+
+    overflow: visible;
+
+    padding: 1.5rem;
+  }
+
+  .main-content {
+    padding: 2rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-header-banner,
+  .card-body-banner,
+  .card-body-banner2,
+  .score-card {
+    padding: 1.5rem;
+  }
+
+  th,
+  td {
+    padding: 0.85rem 1rem;
+  }
+
+  .score-circle {
+    width: 120px;
+    height: 120px;
+
+    min-width: 120px;
+    min-height: 120px;
+  }
+
+  .score-number {
+    font-size: 2rem;
+  }
 }
