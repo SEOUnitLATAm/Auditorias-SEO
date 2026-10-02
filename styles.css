@@ -178,17 +178,13 @@ body {
   .card-body-banner2 {
     padding: 18px;
   }
-
-  table th,
-  table td {
-    padding: 8px 10px;
-  }
 }
 
 table {
   display: block;
   width: 100%;
   max-width: 100%;
+  box-sizing: border-box;
   overflow-x: auto;
   border-collapse: collapse;
   margin: 20px 0;
@@ -200,6 +196,13 @@ table td {
   border: 1px solid #d1d5db;
   padding: 10px 14px;
   text-align: left;
+}
+
+@media (max-width: 760px) {
+  table th,
+  table td {
+    padding: 8px 10px;
+  }
 }
 
 table th {
