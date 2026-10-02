@@ -89,6 +89,13 @@ body {
   margin: 4px 0 22px;
 }
 
+.hero-section img.logo2 {
+  display: block;
+  width: min(220px, 100%);
+  height: auto;
+  margin-bottom: 18px;
+}
+
 .hero-section h1 {
   margin: 0;
   color: #172554;
@@ -119,12 +126,6 @@ body {
 
 .logo {
   font-weight: 700;
-}
-
-.logo2 {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
 }
 
 .card-body-banner,
@@ -168,3 +169,4 @@ body {
     position: static;
   }
 }
+
