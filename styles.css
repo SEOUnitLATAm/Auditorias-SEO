@@ -1,544 +1,164 @@
-:root {
-
-  /* Colors */
-  --bg-dark: #000050;
-  --bg-sidebar: #000050;
-  --bg-light: #ffffff;
-  --bg-card: #f7f9fa;
-
-  --bg-banner-green: #b0f467;
-  --bg-banner-gray: #f0f0f0;
-
-  --text-light: #ffffff;
-  --text-primary: #000050;
-  --text-dark: #0a0a0a;
-  --text-muted: #333333;
-
-  --color-h3: #5465ff;
-
-  --color-pass: #00b887;
-  --color-fail: #e08b28;
-
-  --border-dark: #4b5563;
-  --border-light: #2a3447;
-
-  --gray-100: #f9fafb;
-  --gray-300: #e5e7eb;
-
-  /* Typography */
-  --font-main:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
-
-  /* Layout */
-  --sidebar-width: 280px;
-  --card-max-width: 1200px;
-
-  /* Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-full: 9999px;
-
-  /* Effects */
-  --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.15);
-
-  /* Motion */
-  --transition-fast: 0.2s ease;
-}
-
-
-/* =========================================================
-   RESET
-========================================================= */
-
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-
-/* =========================================================
-   BASE
-========================================================= */
-
-html {
-  scroll-behavior: smooth;
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1f2937;
+  background: #f3f5f9;
 }
 
 body {
-  background: var(--bg-dark);
-  color: var(--text-light);
-  font-family: var(--font-main);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  margin: 0;
+  padding: 24px;
 }
-
-img,
-picture,
-svg,
-video {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-iframe {
-  max-width: 100%;
-}
-
-p,
-article,
-.card-body-banner,
-.card-body-banner2 {
-  text-align: justify;
-  hyphens: auto;
-  overflow-wrap: break-word;
-  margin-bottom: 1.25rem;
-}
-
-
-/* =========================================================
-   HEADINGS
-========================================================= */
-
-h1,
-h2,
-h4,
-h5,
-h6 {
-  margin-top: 1.75rem;
-  margin-bottom: 1rem;
-  line-height: 1.3;
-  color: var(--text-primary);
-}
-
-h3 {
-  color: var(--color-h3);
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.35;
-  margin-top: 2rem;
-  margin-bottom: 1.25rem;
-}
-
-
-/* =========================================================
-   LAYOUT
-========================================================= */
 
 .container {
-  display: flex;
-  align-items: flex-start;
-  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(230px, 290px) minmax(0, 1fr);
+  gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: start;
 }
 
-
-/* =========================================================
-   SIDEBAR
-   SOLUCIÓN DEFINITIVA ANTI-SOLAPAMIENTO
-========================================================= */
+.sidebar,
+.preview-card,
+.main-content section {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgb(15 23 42 / 5%);
+}
 
 .sidebar {
-
   position: sticky;
-  top: 25px;
-
-  width: var(--sidebar-width);
-  min-width: var(--sidebar-width);
-
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 20px;
-  padding: 20px 10px;
-
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-h3) transparent;
+  top: 24px;
+  padding: 24px;
 }
-
-.sidebar::-webkit-scrollbar {
-  width: 6px;
-}
-
-.sidebar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.sidebar::-webkit-scrollbar-thumb {
-  background: var(--color-h3);
-  border-radius: 999px;
-}
-
-.sidebar img,
-.sidebar .logo {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  flex-shrink: 0;
-}
-
-
-/* =========================================================
-   SCORE
-========================================================= */
 
 .score-circle {
-
-  width: 150px;
-  height: 150px;
-
-  min-width: 150px;
-  min-height: 150px;
-
-  flex-shrink: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 6px solid var(--color-fail);
+  display: grid;
+  width: 132px;
+  aspect-ratio: 1;
+  place-items: center;
+  margin: 0 auto 16px;
+  border: 9px solid #dbeafe;
   border-radius: 50%;
-
-  margin-top: 10px;
 }
 
 .score-number {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--text-light);
+  color: #334155;
+  font-size: 1.7rem;
+  font-weight: 750;
 }
 
-.score-pass {
-  color: var(--color-pass);
+.site-url {
+  margin: 0 0 24px;
+  overflow-wrap: anywhere;
+  text-align: center;
+  font-weight: 650;
 }
-
-.score-fail {
-  color: var(--color-fail);
-}
-
-
-/* =========================================================
-   METRICS
-========================================================= */
 
 .metrics {
-  width: 100%;
-  margin-top: 2rem;
-  flex-shrink: 0;
+  display: grid;
+  gap: 4px;
 }
 
 .metric-item {
   display: flex;
   justify-content: space-between;
-
-  padding: 1rem 0;
-
-  border-bottom: 1px solid var(--border-light);
-
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  gap: 12px;
+  padding: 11px 0;
+  border-top: 1px solid #edf0f5;
+  font-size: 0.9rem;
 }
 
-
-/* =========================================================
-   MAIN CONTENT
-========================================================= */
+.score-pass {
+  flex: 0 0 auto;
+  color: #475569;
+  font-weight: 650;
+}
 
 .main-content {
-
-  flex: 1;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 2rem;
-
-  background: var(--bg-light);
-  color: var(--text-dark);
-
-  padding: 3.5rem 2.5rem;
+  min-width: 0;
 }
 
-
-/* =========================================================
-   HERO
-========================================================= */
-
 .hero-section {
-  width: 100%;
-  max-width: var(--card-max-width);
-  text-align: center;
+  margin: 4px 0 22px;
 }
 
 .hero-section h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--text-primary);
+  margin: 0;
+  color: #172554;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
 }
 
-
-/* =========================================================
-   BUTTONS
-========================================================= */
-
-.btn-primary {
-
-  margin-top: 1.5rem;
-  padding: 0.9rem 1.8rem;
-
-  background: var(--bg-sidebar);
-  color: var(--text-light);
-
-  border: none;
-  border-radius: var(--radius-sm);
-
-  font-weight: 700;
-  cursor: pointer;
-
-  transition:
-    transform 0.15s ease,
-    opacity var(--transition-fast);
+.hero-section p {
+  margin: 8px 0 0;
+  color: #64748b;
 }
 
-.btn-primary:hover {
-  opacity: 0.9;
-}
-
-.btn-primary:active {
-  transform: scale(0.98);
-}
-
-
-/* =========================================================
-   CARDS
-========================================================= */
-
-.preview-card,
-.score-card {
-
-  width: 100%;
-  max-width: var(--card-max-width);
-
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
-
-  margin-bottom: 2rem;
-}
-
-.preview-card {
+.main-content section {
   overflow: hidden;
-  background: var(--bg-light);
+  margin-bottom: 20px;
 }
-
-.score-card {
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 1.5rem;
-
-  padding: 2.5rem;
-
-  background: var(--bg-card);
-}
-
-
-/* =========================================================
-   BANNERS
-========================================================= */
 
 .card-header-banner {
-
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-
-  padding: 1.5rem 2.5rem;
-
-  background: var(--bg-light);
-
-  border-bottom: 1px solid var(--gray-300);
+  min-height: 10px;
+  padding: 14px 22px;
+  background: #000050;
+  color: #fff;
 }
 
-.card-body-banner {
-
-  padding: 2.5rem;
-
-  background: var(--bg-banner-green);
-  color: var(--text-primary);
-
-  line-height: 1.8;
+.card-header-banner:empty {
+  min-height: 10px;
+  padding: 0;
 }
 
-.card-body-banner2 {
-
-  padding: 2.5rem;
-
-  background: var(--bg-banner-gray);
-  color: var(--text-dark);
-
-  line-height: 1.8;
-}
-
-
-/* =========================================================
-   TABLES
-========================================================= */
-
-.table-responsive {
-
-  width: 100%;
-
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-
-  margin: 2.5rem 0;
-
-  border-radius: var(--radius-md);
-
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-table {
-
-  width: 100%;
-
-  border-collapse: separate;
-  border-spacing: 0;
-
-  table-layout: fixed;
-
-  background: var(--bg-light);
-  color: var(--text-dark);
-}
-
-th {
-
-  padding: 1rem 1.25rem;
-
-  background: var(--gray-300);
-  color: var(--text-primary);
-
-  text-align: left;
+.logo {
   font-weight: 700;
-  letter-spacing: 0.5px;
-
-  border-bottom: 2px solid var(--border-dark);
 }
 
-td {
-
-  padding: 1rem 1.25rem;
-
-  border-bottom: 1px solid var(--gray-300);
-
-  line-height: 1.6;
-
-  overflow-wrap: anywhere;
-  word-break: break-word;
+.card-body-banner,
+.card-body-banner2 {
+  padding: 22px;
 }
 
-tbody tr:hover {
-  background: var(--gray-100);
+.card-body-banner h2,
+.card-body-banner2 h2 {
+  margin: 0 0 14px;
+  color: #172554;
+  font-size: 1.25rem;
 }
 
-
-/* =========================================================
-   UTILITIES
-========================================================= */
-
-.hidden {
-  display: none;
+.card-body-banner p,
+.card-body-banner2 p,
+.card-body-banner2 li {
+  line-height: 1.65;
 }
 
-.text-center {
-  text-align: center;
+.card-body-banner2 h3 {
+  margin: 0 0 12px;
+  font-size: 1rem;
 }
 
-.text-left {
-  text-align: left;
+.card-body-banner2 ul {
+  padding-left: 22px;
 }
 
-.text-right {
-  text-align: right;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
+@media (max-width: 760px) {
+  body {
+    padding: 14px;
+  }
 
   .container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .sidebar {
-
-    position: relative;
-
-    width: 100%;
-    min-width: 100%;
-
-    height: auto;
-    max-height: none;
-
-    overflow: visible;
-
-    padding: 1.5rem;
-  }
-
-  .main-content {
-    padding: 2rem 1rem;
-  }
-
-  .hero-section h1 {
-    font-size: 1.8rem;
-  }
-
-  h3 {
-    font-size: 1.3rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .card-header-banner,
-  .card-body-banner,
-  .card-body-banner2,
-  .score-card {
-    padding: 1.5rem;
-  }
-
-  th,
-  td {
-    padding: 0.85rem 1rem;
-  }
-
-  .score-circle {
-    width: 120px;
-    height: 120px;
-
-    min-width: 120px;
-    min-height: 120px;
-  }
-
-  .score-number {
-    font-size: 2rem;
+    position: static;
   }
 }
