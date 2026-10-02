@@ -121,6 +121,12 @@ body {
   font-weight: 700;
 }
 
+.logo2 {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
 .card-body-banner,
 .card-body-banner2 {
   padding: 22px;
