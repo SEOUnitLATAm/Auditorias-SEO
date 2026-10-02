@@ -75,6 +75,10 @@ body {
   font-size: 0.9rem;
 }
 
+.metric-item > span:first-child {
+  min-width: 0;
+}
+
 .score-pass {
   flex: 0 0 auto;
   color: #475569;
@@ -167,6 +171,42 @@ body {
 
   .sidebar {
     position: static;
+    padding: 18px;
+  }
+
+  .card-body-banner,
+  .card-body-banner2 {
+    padding: 18px;
+  }
+
+  table th,
+  table td {
+    padding: 8px 10px;
   }
 }
 
+table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 20px 0;
+  white-space: nowrap;
+}
+
+table th,
+table td {
+  border: 1px solid #d1d5db;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f8fafc;
+  font-weight: 600;
+}
+
+h3[id^="cat"] {
+  color: #5465ff;
+}
