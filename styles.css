@@ -91,18 +91,49 @@ svg {
 
 /* Sidebar and general report cards */
 .score-circle {
+  --score: 0%;
+  --score-progress: #dc2626;
+  --score-remaining: #b7ced8;
+
   display: grid;
-  width: 132px;
+  position: relative;
+  width: min(200px, 100%);
   aspect-ratio: 1;
   place-items: center;
   margin: 0 auto 16px;
-  border: 9px solid #ea580c;
   border-radius: 50%;
+  background-color: var(--score-remaining);
+  background-image: conic-gradient(
+    from -90deg,
+    var(--score-progress) 0 var(--score),
+    var(--score-remaining) var(--score) 100%
+  );
+}
+
+.score-circle::before {
+  position: absolute;
+  inset: 7.8%;
+  border-radius: 50%;
+  background: #fff;
+  content: "";
+}
+
+.score-circle.score-good {
+  --score-progress: #16a34a;
+}
+
+.score-circle.score-medium {
+  --score-progress: #f59e0b;
+}
+
+.score-circle.score-low {
+  --score-progress: #dc2626;
 }
 
 .score-number {
-  color: #ea580c;
-  font-size: 1.7rem;
+  z-index: 1;
+  color: var(--score-progress);
+  font-size: clamp(2rem, 7vw, 2.7rem);
   font-weight: 750;
 }
 
@@ -145,6 +176,18 @@ svg {
   flex: 0 0 auto;
   color: #475569;
   font-weight: 650;
+}
+
+.score-good {
+  color: #16a34a !important;
+}
+
+.score-medium {
+  color: #f59e0b !important;
+}
+
+.score-low {
+  color: #dc2626 !important;
 }
 
 .section-heading {
@@ -415,6 +458,8 @@ table:not(.overlap-matrix) td.severity-informativa {
   display: block;
   width: 100%;
   height: auto;
+  margin-top: 18px;
+  overflow: visible;
 }
 
 .chart-grid line {
