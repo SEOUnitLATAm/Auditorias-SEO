@@ -178,16 +178,31 @@ svg {
   font-weight: 650;
 }
 
+.score-verde,
 .score-good {
   color: #16a34a !important;
 }
 
+.score-naranja,
 .score-medium {
   color: #f59e0b !important;
 }
 
+.score-rojo,
 .score-low {
   color: #dc2626 !important;
+}
+
+.score-circle.score-verde {
+  --score-progress: #16a34a;
+}
+
+.score-circle.score-naranja {
+  --score-progress: #f59e0b;
+}
+
+.score-circle.score-rojo {
+  --score-progress: #dc2626;
 }
 
 .section-heading {
